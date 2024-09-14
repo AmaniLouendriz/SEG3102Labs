@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="element">
+        <label for="fNumber">First Number:</label>
+        <input name="fNumber" id="fNumber" value="{{firstNumber | number:'1.0-9'}}" #fNumber>
+    </div>
+
+    <div class="element">
+        <label for="sNumber">Second Number:</label>
+        <input name="sNumber" id="sNumber" value="{{secondNumber | number:'1.0-9'}}" #sNumber>
+    </div>
+
+    <div class="element">
+        <label for="result">Result:</label>
+        <input name="result" id="result" value="{{out | number:'1.0-9'}}" #result>
+    </div>
+
+    <div class="buttons">
+        <button (click)="add(fNumber.value,sNumber.value)">+</button>
+        <button (click)="substract(fNumber.value,sNumber.value)">-</button>
+        <button (click)="multiply(fNumber.value,sNumber.value)">*</button>
+        <button (click)="divide(fNumber.value,sNumber.value)">/</button>
+    </div>
+</div>
