@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Calculator</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <h1 class="title">Spring Calculator</h1>
+    <form th:action="@{/calculate}" method="get">
+        <div class="wrapper">
+            <div class="error" th:switch="${error}">
+                <p th:case="NumberFormatError">
+                    Please make sure all the input numbers are valid
+                </p>
+                <p th:case="OperationFormatError">
+                    Please make sure the arithmetic operation is valid
+                </p>
+            </div>
+            <div class="element">
+                <label for="fNumber">First Number:</label>
+                <input name="fNumber" id="fNumber" th:name="firstNumber" th:value="${firstNumber}">
+            </div>        
+            <div class="element">
+                <label for="sNumber">Second Number:</label>
+                <input name="sNumber" id="sNumber" th:name="secondNumber" th:value="${secondNumber}">
+            </div>
+        
+            <div class="element">
+                <label for="result">Result:</label>
+                <input name="result" id="result" th:name="result" th:value="${result}">
+            </div>
+        
+            <div class="buttons">
+                <button type="submit" th:name="operation" th:value="add">+</button>
+                <button type="submit" th:name="operation" th:value="substract">-</button>
+                <button type="submit" th:name="operation" th:value="multiply">*</button>
+                <button type="submit" th:name="operation" th:value="divide">/</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
