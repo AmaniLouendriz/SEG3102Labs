@@ -1,0 +1,13 @@
+<form class="ui large form segment p-4">
+    <h3 class="ui header">Shopping-List</h3>
+    <div class="wrapper">
+        <div class="form-group col-8">
+            <!-- <label for="itemName">Name</label> -->
+            <input type="text" required minlength="2" class="form-control" name="itemName" id="itemName" [(ngModel)]="item.name">
+            <div *ngIf="validationMessage" class="error">{{validationMessage}}</div>
+        </div>
+        <div class="col-4">
+            <button (click)="addElement()" class="btn btn-secondary">Add</button>
+        </div>
+    </div>
+</form>

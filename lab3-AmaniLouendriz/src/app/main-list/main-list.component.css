@@ -1,0 +1,6 @@
+.item-list {
+    /* border: 3px solid pink; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

@@ -1,0 +1,8 @@
+<div class="listOfItems">
+    <!-- loop through present items -->
+    <!-- <button (click)="debug()">debug</button> -->
+    <div class="item-list" *ngIf="items.length > 0"> 
+        <app-list-element *ngFor="let item of items" [item]="item" (fireDelete)="deleteElementFromArray($event)">
+        </app-list-element>
+    </div>
+</div>

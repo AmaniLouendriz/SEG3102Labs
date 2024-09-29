@@ -1,0 +1,13 @@
+<div class="indElement">
+    <div class="group1 col-4">
+        <button class="btn btn-success" *ngIf="modifyEnabled == false"  (click)="modify()">{{getName()}}</button>
+        <input *ngIf="modifyEnabled == true" class="m-2"  type="text" required minlength="2" name="itemName" id="itemName" [(ngModel)]="item.name">
+        <button class="btn btn-success"  *ngIf="modifyEnabled == true" (click)="save()">Save changes</button>
+        <div *ngIf="validationMessage" class="error">{{validationMessage}}</div>
+    </div>
+    <div class="button col-4">
+        <button class="btn btn-primary" (click)="delete()">Delete</button>
+    </div>
+</div>
+
+
