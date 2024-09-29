@@ -1,14 +1,8 @@
-# Student Number: 
-300218319
-# Student Name:
-Amani Louendriz
 # To run:
 npm install then ng serve
 
-This is a shopping list made with Angular
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/U9ODFcEu)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=16096760&assignment_repo_type=AssignmentRepo)
+# Overview
+This is a shopping list made with angular, you can add items, modify their names and delete them as well. It is built using angular components, they are communicating either through the parent-child methods or through a notification service implementing the observer pattern if the communication is between siblings components.
 
 # ShoppingList
 
