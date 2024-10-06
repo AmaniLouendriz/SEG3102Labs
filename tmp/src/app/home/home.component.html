@@ -1,0 +1,38 @@
+<div class="container m-3">
+    <h1>User Form</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <!-- first name -->
+        <div class="mb-3 w-50">
+            <label for="firstName" class="m-2">First Name:</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+            <div [hidden]="first.pristine || first.valid" class="alert alert-danger m-2">
+                First Name is a mandatory field
+            </div>
+        </div>
+        <!-- last name -->
+        <div class="mb-3 w-50">
+            <label for="lastName" class="m-2">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+            <div [hidden]="last.pristine || last.valid" class="alert alert-danger m-2">
+                Last Name is a mandatory field
+            </div>
+        </div>
+        <!-- Phone Number -->
+        <div class="mb-3 w-50">
+            <label for="phoneNumber" class="m-2">Phone Number:</label>
+            <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+            <div [hidden]="phoneNumber.pristine || phoneNumber.valid" class="alert alert-danger m-2">
+                Phone Number should be exactly 10 digits long, the first and the fourth digits shouldn't be zeros
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="mb-3 w-50">
+            <label for="email" class="m-2">Email:</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <div [hidden]="email.pristine || email.valid" class="alert alert-danger m-2">
+                Email should be valid; eg:john.doe&#64;gmail.com
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="userForm.invalid">Register</button>
+    </form>
+</div>

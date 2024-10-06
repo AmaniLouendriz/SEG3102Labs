@@ -1,0 +1,28 @@
+<div *ngIf="!loggedUser">
+    <p>Sorry, this account isn't present...</p>
+</div>
+
+<div *ngIf="loggedUser">
+    <h2>Hello User# {{loggedUser.id}}</h2>
+    <div class="border border-3 border-primary w-50 m-2 center d-flex flex-row mb-3">
+        <div class="m-2">
+            <div><b>First Name:</b></div>
+            <div>{{loggedUser.firstName}}</div>
+        </div>
+        <div class="m-2">
+            <div><b>Last Name:</b></div>
+            <div>{{loggedUser.lastName}}</div>
+        </div>
+        <div class="m-2">
+            <div><b>Phone Number:</b></div>
+            <div *ngIf="loggedUser.phoneNumber">{{loggedUser.phoneNumber}}</div>
+            <div *ngIf="!loggedUser.phoneNumber">Not Provided</div>
+        </div>
+        <div class="m-2">
+            <div><b>Email:</b></div>
+            <div *ngIf="loggedUser.email">{{loggedUser.email}}</div>
+            <div *ngIf="!loggedUser.email">Not Provided</div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-success p-2 m-3" (click)="goBack()">Go Back to Home</button>
