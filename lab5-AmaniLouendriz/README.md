@@ -1,5 +1,5 @@
 # Summary
-A form that saves employee information to a firestore database
+Angular form that saves employee information to a firestore database
 
 # To run
 please use npm install, then ng serve.
