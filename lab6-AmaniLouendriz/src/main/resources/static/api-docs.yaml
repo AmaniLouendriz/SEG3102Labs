@@ -1,0 +1,137 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /calculator/subtract/{nombre1}/{nombre2}:
+    get:
+      tags:
+      - calculator-controller
+      operationId: getSubstraction
+      parameters:
+      - name: nombre1
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      - name: nombre2
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: number
+                format: double
+  /calculator/multiply/{nombre1}/{nombre2}:
+    get:
+      tags:
+      - calculator-controller
+      operationId: getMultiplication
+      parameters:
+      - name: nombre1
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      - name: nombre2
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: number
+                format: double
+  /calculator/divide/{nombre1}/{nombre2}:
+    get:
+      tags:
+      - calculator-controller
+      operationId: getDiviision
+      parameters:
+      - name: nombre1
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      - name: nombre2
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: number
+                format: double
+  /calculator/add/{nombre1}/{nombre2}:
+    get:
+      tags:
+      - calculator-controller
+      operationId: getAddition
+      parameters:
+      - name: nombre1
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      - name: nombre2
+        in: path
+        required: true
+        schema:
+          type: number
+          format: double
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: number
+                format: double
+components: {}
