@@ -3,10 +3,4 @@
 # lab9-converter
 
 
-# Student Name
-
-Amani Louendriz
-
-# Student Number
-
-300 218 319
+implementing spring security to protect api routes from being accessed if not authentificated
